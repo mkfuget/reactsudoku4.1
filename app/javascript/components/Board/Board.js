@@ -20,7 +20,9 @@ const BoardRow = styled.tr`
 `
 
 const BoardTable = styled.table`
-margin-left: 80px;
+    margin-left: 80px;
+    border-collapse: collapse;
+
 `
 const Board = (props) => {
     
