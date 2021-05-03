@@ -29,6 +29,7 @@ puzzletypes = Puzzletype.create([
         rules_description: "Each row, column and square must contain all of the numbers 1-9 and cannot have two of the same number"
 
     },
+    =begin
     {
         name: "Cross Sudoku",
         description: "In addition to the classic sudoku rules, (each row, column, and square need to contain all of the numbers 1-9, thus any row, column or 
@@ -49,6 +50,7 @@ puzzletypes = Puzzletype.create([
 
 
     }
+    =end
 
 
 ])
@@ -154,6 +156,29 @@ puzzles = Puzzle.create([
         puzzletype: puzzletypes[2]
     },
     {
+        name: "Classic Hard 4",
+        author: "MKFuget",
+        difficulty: "3",
+        data: "5...264........13.2.8.7......65....7.2.....1.8....36......3.7.9.89........594...3"
+        puzzletype: puzzletypes[2]
+    },
+    {
+        name: "Classic Hard 5",
+        author: "MKFuget",
+        difficulty: "3",
+        data: ".216..8.......92.....1....626......3.5..7..9.8......253....5.....47.......2..397.",
+        puzzletype: puzzletypes[2]
+    },
+    {
+        name: "Classic Hard 6",
+        author: "MKFuget",
+        difficulty: "3",
+        data: ".....3....618.5...5.8..2.6...7.24....4.....5....31.9...9.4..3.7...7.128....2.....",
+        puzzletype: puzzletypes[2]
+    },
+
+    =begin
+    {
         name: "Cross Sudoku 1",
         author: "MKFuget",
         difficulty: "3",
@@ -167,7 +192,7 @@ puzzles = Puzzle.create([
         data: ".................................................................................",
         puzzletype: puzzletypes[5]
     }
-
+    =end
 
 
 ])
