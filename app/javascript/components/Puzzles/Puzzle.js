@@ -1,14 +1,9 @@
 import React, {useState, useEffect, Fragment} from 'react'
-import axios from 'axios'
 import * as Input from '../functional/InputUtility'
 import {useSelector, useDispatch} from 'react-redux'
-import {useSpring, animated} from 'react-spring'
-import BoardData from '../functional/BoardData'
 import Board from '../Board/Board'
 import styled from 'styled-components'
-import ADD_TO_BOARD_SUCESSFUL from '../ActionCreators';
 import sudokuStore from '../../store'
-import { func } from 'prop-types'
 
 
 const BOARD_WIDTH = 9;
