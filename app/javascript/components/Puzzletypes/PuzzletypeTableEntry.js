@@ -72,7 +72,7 @@ const PuzzletypeTableEntry = (props) => {
             <Fragment>
                 <PuzzleTypeHeaderRow>
                     <PuzzleTableHeaderData>
-                        <Button variant="outline-primary" onClick ={() =>
+                        <button type="button" class="btn btn-outline-primary" onClick ={() =>
                             setVisiblePuzzles(!visiblePuzzles)
                         } 
                         >
@@ -80,7 +80,7 @@ const PuzzletypeTableEntry = (props) => {
                             ? '-'
                             : '+'
                         }
-                        </Button>
+                        </button>
                         {" "+props.attributes.name}
                     </PuzzleTableHeaderData>
                 </PuzzleTypeHeaderRow>
