@@ -84,6 +84,19 @@ export function solvePuzzle(stateData)
 
 }
 
+export function resetBoard(stateData)
+{
+    const dispatch = useDispatch();
+
+    return () => 
+    {
+        let addBoard = new BoardData();
+        addBoard.addDataHash(stateData);
+        addBoard.resetPuzzle();
+        dispatch(Action.UPDATE_BOARD(boardToStoreHash(addBoard)))
+    }
+}
+
 export function processKeyPress(e, stateData, index)
 {
     if(index!== -1)

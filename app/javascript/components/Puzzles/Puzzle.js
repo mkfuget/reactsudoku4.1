@@ -20,11 +20,13 @@ const BOARD_SQUARES = 81;
     `
     const SideBar = styled.div`
       width: 200px;
+      font-size: 20px;
 
     `
     const PuzzleButton = styled.button`
       width: 100%;
       margin-top: 8px;
+      font-size: 20px;
     `
 
     const Puzzle = (props) =>{
@@ -41,6 +43,7 @@ const BOARD_SQUARES = 81;
 
         const currentSelectionIndex = useSelector(state => state.selectionReducer).index;
         const solvePuzzleHandler = Input.solvePuzzle(stateData);           
+        const resetPuzzleHandler = Input.resetBoard(stateData);           
 
         const handleKeyDown = (e) => {dispatch(Input.processKeyPress(e, stateData, currentSelectionIndex))};
         
@@ -67,7 +70,7 @@ const BOARD_SQUARES = 81;
                     <h2>Rules</h2>
                     <p>{puzzleData}</p>
                     <PuzzleButton type="button" onClick = {()=>solvePuzzleHandler(stateData)} className="btn btn-primary" > Solve Puzzle</PuzzleButton>
-                    <PuzzleButton type="button" onClick = {()=>solvePuzzleHandler(stateData)} className="btn btn-primary" > Reset Puzzle</PuzzleButton>
+                    <PuzzleButton type="button" onClick = {()=>resetPuzzleHandler(stateData)} className="btn btn-primary" > Reset Puzzle</PuzzleButton>
 
                   </SideBar>
                 </ColumnWrappers>

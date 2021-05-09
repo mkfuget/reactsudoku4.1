@@ -587,12 +587,12 @@ export default class BoardData{
 
     bubbleDown(heapIndex: number): void
     {
-        var leftIndex = this.left(heapIndex);
-        var rightIndex = this.right(heapIndex);
-        var child = heapIndex;
+        let leftIndex = this.left(heapIndex);
+        let rightIndex = this.right(heapIndex);
+        let child = heapIndex;
 
-        var childValue = this.solveOrder[child].numOptions;
-        var childBoardIndex = this.solveOrder[child].index;
+        let childValue = this.solveOrder[child].numOptions;
+        let childBoardIndex = this.solveOrder[child].index;
         if(leftIndex < this.heapSize)
         {
             var leftValue = this.solveOrder[leftIndex].numOptions;
@@ -613,8 +613,8 @@ export default class BoardData{
         }
         if(rightIndex < this.heapSize)
         {
-            var rightValue = this.solveOrder[rightIndex].numOptions;
-            var rightBoardIndex = this.solveOrder[rightIndex].index;
+            let rightValue = this.solveOrder[rightIndex].numOptions;
+            let rightBoardIndex = this.solveOrder[rightIndex].index;
     
             if(rightValue < childValue)
             {
