@@ -5,8 +5,6 @@ import * as InputUtility from '../functional/InputUtility'
 import {useSelector, useDispatch} from 'react-redux'
 import {useSpring, animated} from 'react-spring'
 import styled from 'styled-components'
-import ADD_TO_BOARD_SUCESSFUL from '../ActionCreators';
-import store from '../../packs/index.jsx'
 
 
 

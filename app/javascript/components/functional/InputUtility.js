@@ -1,16 +1,19 @@
 import {useSelector, useDispatch} from 'react-redux'
-import BoardData from './BoardData'
+import BoardData from './BoardData.js'
 import * as Action from '../ActionCreators'
 import axios from 'axios'
-import Board from '../Board/Board';
 
 //takes the 
 export const fetchBoardData = (url) =>
 {
+    console.log("TEST1");
     return async dispatch => {
         try {
+            console.log(url);
             let data = await axios.get(url)
+            console.log("TEST3");
             let addBoard = new BoardData();
+            console.log("TEST4");
             const boardData = data.data.data[0].attributes.data;
             const puzzleData = data.data.included[0].attributes.rules_description;
             addBoard.addData(boardData);

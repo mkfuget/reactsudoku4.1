@@ -22,6 +22,10 @@ const BOARD_SQUARES = 81;
       width: 200px;
 
     `
+    const PuzzleButton = styled.button`
+      width: 100%;
+      margin-top: 8px;
+    `
 
     const Puzzle = (props) =>{
       console.log(`/api/v1${props.match.url}`)
@@ -62,7 +66,9 @@ const BOARD_SQUARES = 81;
                   <SideBar>
                     <h2>Rules</h2>
                     <p>{puzzleData}</p>
-                    <button type="button" onClick = {()=>solvePuzzleHandler(stateData)} className="btn btn-primary" > Solve Puzzle</button>
+                    <PuzzleButton type="button" onClick = {()=>solvePuzzleHandler(stateData)} className="btn btn-primary" > Solve Puzzle</PuzzleButton>
+                    <PuzzleButton type="button" onClick = {()=>solvePuzzleHandler(stateData)} className="btn btn-primary" > Reset Puzzle</PuzzleButton>
+
                   </SideBar>
                 </ColumnWrappers>
 
