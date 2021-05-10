@@ -72,7 +72,7 @@ const PuzzletypeTableEntry = (props) => {
             <Fragment>
                 <PuzzleTypeHeaderRow>
                     <PuzzleTableHeaderData>
-                        <button type="button" class="btn btn-outline-primary" onClick ={() =>
+                        <button type="button" className="btn btn-outline-primary" onClick ={() =>
                             setVisiblePuzzles(!visiblePuzzles)
                         } 
                         >
