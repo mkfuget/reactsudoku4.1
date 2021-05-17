@@ -400,7 +400,7 @@ export default class BoardData{
                     break;
                 case 'Out of options for current path':
                     let lastChoice = choices.pop();
-                    if(choices.length === 0 || lastChoice === undefined)
+                    if(lastChoice === undefined)
                     {
                         return solutionSteps;
                     }
@@ -417,6 +417,10 @@ export default class BoardData{
 
                     solutionSteps.push(addToSolutionSteps);
                     guessIndex = lastChoice.guessIndex + 1;
+                    if(choices.length === 0)
+                    {
+                        return solutionSteps;
+                    }
                     break;
             }
         }
